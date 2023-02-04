@@ -1,0 +1,10 @@
+.geopoint-map-placeholder {
+  padding: 200px 20px; 
+  background-color: #f5f5f5; 
+  text-align:center;
+}
+
+#map { 
+  aspect-ratio: 16 / 9; 
+  width: 100%; 
+}

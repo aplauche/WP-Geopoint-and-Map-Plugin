@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "fsd-gp/geopoint-map",
+  "title": "Geopoint Map",
+  "category": "text",
+  "description": "Adds a map of geopoints",
+  "textdomain": "fsd-gp",
+  "attributes": {},
+  "editorScript": "file:./index.js",
+  "script": "file:./frontend.js",
+  "style": "file:./index.css"
+}
