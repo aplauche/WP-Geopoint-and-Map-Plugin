@@ -1,4 +1,3 @@
-// import L from 'leaflet'
 import apiFetch from '@wordpress/api-fetch';
 
 document.addEventListener("DOMContentLoaded", async function() {
@@ -6,8 +5,6 @@ document.addEventListener("DOMContentLoaded", async function() {
   if(document.querySelector('#map')){
 
     const points = await apiFetch( { path: '/wp/v2/geopoint' } )
-
-    console.log(points);
   
     var map = L.map('map').setView([points[0].meta.fsd_lat, points[0].meta.fsd_lng], 4);
   

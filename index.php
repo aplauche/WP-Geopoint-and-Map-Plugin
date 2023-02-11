@@ -29,7 +29,7 @@ foreach($allFiles as $filename) {
   include_once($filename);
 }
 
-//register_activation_hook( __FILE__, 'fsd_activate_plugin' );
+// Hooks
 add_action('init', 'fsd_geopoint_post_type');
 add_action('init', 'fsd_register_assets');
 add_action('init', 'fsd_register_blocks');
@@ -37,6 +37,7 @@ add_action( 'enqueue_block_editor_assets', 'fsd_enqueue_block_editor_assets');
 add_action( 'wp_enqueue_scripts', 'fsd_enqueue_scripts' );
 
 
+// Register Blocks
 function fsd_register_blocks(){
   register_block_type( FSDGP_DIR . 'build/blocks/geopoint-map', [
     "render_callback" => 'geopoint_map_render'
@@ -44,6 +45,7 @@ function fsd_register_blocks(){
 }
 
 
+// Enqueues
 function fsd_enqueue_block_editor_assets() {
   $current_screen = get_current_screen(  );
 
